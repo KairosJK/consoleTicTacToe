@@ -15,5 +15,5 @@ repositories {
 
 task run;
 run.doFirst {
-    println "To run the program:\njava -cp build/classes/java/main a1.TicTacToeP"
+    println "To run the program:\njava -cp build/classes/java/main tictactoe.tictactoe"
 }
