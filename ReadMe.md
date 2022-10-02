@@ -1,51 +1,50 @@
-# Project Title
+# TicTacToe
 
-Simple overview of use/purpose.
+A 2-player replication of the game TicTacToe based off of [Wikipedias ruleset](https://en.wikipedia.org/wiki/Tic-tac-toe), played in the console. 
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+TicTacToe is a 2 player game in which players take turns, over the console interface, choosing positions trying to get 3 of their symbols in a row. After one player is able to match 3 symbols, they win the game. The program allows for multiple games to be played in a row, and features player coloring for easier UI readability.
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing and running your program.
-
-
+* This software has been designed in Linux for use in Linux, there is no guarantee of functionality in Windows or Mac.
+* Must have a terminal application to run the executable
+* openjdk 11 and gradle are also needed
 
 ### Executing program
 
-* How to build and run the program
-* Step-by-step bullets
+First, Clone the repo and enter the `A1` folder.
+
+The project can then be built below by running the command :
 ```
-use code blocks for commands
+gradle build
 ```
-* include the expected output
+Followed by running the Java executable with the command: 
+```
+java -cp build/classes/java/main tictactoe.TicTacToe
+```
+Alternitively, both can be done in one command using: 
+```
+gradle run
+```
+Enjoy.
 
 ## Limitations
 
-What isn't done? What things cause errors?  
+There are no errors to game functionality, it works as intended.
+
+One limitation to improve in further development is the addition of a cell class to increase encapsulation in the main board array object, added with a constructor, accessor, and mutator for individual cells. The possibility of adding a rule class to organize checking win conditions, checking validity of movements, and move history could also be good for code maintanance.
 
 ## Author Information
 
-Your name and contact information including your email address
+**Author Name:** Jonathan Kocevar
+
+**Author Email:** jkocevar@uoguelph.ca
 
 ## Development History
 
-Keep a log of what things you accomplish when.  You can use git's tagging feature to tag the versions or you can reference commits.
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [simple-readme] (https://gist.githubusercontent.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc/raw/d59043abbb123089ad6602aba571121b71d91d7f/README-Template.md)
-
-
-

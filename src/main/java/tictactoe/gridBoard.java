@@ -24,7 +24,7 @@ public class GridBoard {
      * @return StringBuilder Object containing string to print board on console
      */
     public StringBuilder formBoardString() {
-        boardString.setLength(0); // Reset String
+        boardString.delete(0, boardString.length()); // Reset String
         // Outer loop cycles through first index of the ArrayList
         for(int i = 0; i < board.size(); i++) {
             // Inner loop cycles through the inner character Arraylist
@@ -74,6 +74,13 @@ public class GridBoard {
                 board.get(i).add((char)(countCell+'0'));
             }
         }
+    }
+
+    /**
+     * Setter method for clearing the board for new games
+     */
+    public void clearBoard() {
+        board.clear();
     }
 
     /**

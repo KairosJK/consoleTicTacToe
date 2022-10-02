@@ -25,6 +25,13 @@ public class Game {
     }
 
     /**
+     * Setter for board, clearing it of all values
+     */
+    public void clearBoard() {
+        board.clearBoard();
+    }
+
+    /**
      * Setter method for the variable turnCount, increments by 1
      */
     public void increaseTurnCount() {
@@ -164,6 +171,10 @@ public class Game {
         return (p1.checkMoveAgainstPlayerHistory(move) && p2.checkMoveAgainstPlayerHistory(move));
     }
 
+    /**
+     * Input function which checks if player wants new game
+     * @return true for yes to new game, false for no to new game
+     */
     public static boolean playNewGame() {
         System.out.println("Thanks for playing, Would you like to play another round? ('Y'/'N'):");
     

@@ -30,10 +30,11 @@ public class TicTacToe {
           currentGame.increaseTurnCount(); // increment the turn count by one
         }
       }
+      // Check if players want next game
       if(!Game.playNewGame()) {
-        break;
+        break; // No, breaks loop and exits program
       }
-      currentGame = null;
+      currentGame.clearBoard(); // Clears board for next game
     }
   }
 }
