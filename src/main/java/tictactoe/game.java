@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class game {
-    private player p1 = new player();
-    private player p2 = new player();
-    private gridBoard board = new gridBoard();
+public class Game {
+    private Player p1 = new Player();
+    private Player p2 = new Player();
+    private GridBoard board = new GridBoard();
     private int turnCount = 0;
 
     public void initGame() {
@@ -31,8 +31,7 @@ public class game {
         board.printBoard();
         while(true) {
             int playerMove = inputMove();
-            if(checkValidityOfInput(playerMove))
-            {
+            if(checkValidityOfInput(playerMove)) {
                 if(checkAgainstGameHistory(playerMove)) {
                     board.editBoard(playerMove, getCurrentPlayer());
                     if(getCurrentPlayer().equals("Player 1")) {
@@ -42,10 +41,10 @@ public class game {
                     }
                     break;
                 } else {
-                    System.out.println("That cell has already been occupied in play, please select another, try again.");
+                    System.out.println("That cell has already been occupied in play, please select another.");
                 }
             } else {
-                System.out.println("Value entered is not a valid input, please only input a integer from 1-9, try again.");
+                System.out.println("Value entered is not a valid input, please only input another integer from 1-9.");
             }
         }
     }
@@ -111,10 +110,6 @@ public class game {
     }
 
     private boolean checkAgainstGameHistory(int move) {
-        if((p1.checkMoveAgainstPlayerHistory(move) && p2.checkMoveAgainstPlayerHistory(move) == true)) {
-            return true;
-        } else {
-            return false;
-        }
+        return (p1.checkMoveAgainstPlayerHistory(move) && p2.checkMoveAgainstPlayerHistory(move));
     }
 }

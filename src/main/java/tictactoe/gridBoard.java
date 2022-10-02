@@ -1,15 +1,13 @@
 package tictactoe;
 import java.util.ArrayList;
 
-public class gridBoard {
+public class GridBoard {
 
     private static ArrayList<ArrayList<Character>> board = new ArrayList<ArrayList<Character>>(3);
 
     public void printBoard() {
-        for(int i = 0; i < board.size(); i++)
-        {
-            for(int j = 0; j < board.get(i).size(); j++)
-            {
+        for(int i = 0; i < board.size(); i++) {
+            for(int j = 0; j < board.get(i).size(); j++) {
                 System.out.print(" " + (board.get(i).get(j)) + " ");
                 if(j != (board.get(i).size() - 1)) {
                     System.out.print("|");
@@ -67,6 +65,8 @@ public class gridBoard {
                 break;
             case 9:
                 board.get(2).set(2, symbol); // Array pos [2][2]
+                break;
+            default:
                 break;
         }
     }

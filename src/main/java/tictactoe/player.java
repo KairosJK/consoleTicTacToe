@@ -1,8 +1,9 @@
 package tictactoe;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class player {
+public class Player {
     
     private ArrayList<Integer> pastMoves = new ArrayList<Integer>();
 
@@ -23,8 +24,7 @@ public class player {
 
     public boolean checkMoveAgainstPlayerHistory(int move) {
         for(int i = 0; i < pastMoves.size(); i++) {
-            if(pastMoves.get(i) == move)
-            {
+            if(pastMoves.get(i) == move) {
                 return false;
             }
         }
