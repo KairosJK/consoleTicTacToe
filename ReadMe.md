@@ -1,6 +1,6 @@
 # TicTacToe
 
-A 2-player replication of the game TicTacToe based off of [Wikipedias ruleset](https://en.wikipedia.org/wiki/Tic-tac-toe), played in the console. 
+An OOP implementation of the classic 2-player replication of the game TicTacToe, based off of [Wikipedias ruleset](https://en.wikipedia.org/wiki/Tic-tac-toe) and played in the console. 
 
 ## Description
 
@@ -32,11 +32,21 @@ gradle run
 ```
 Enjoy.
 
+### Other Commands
+
+Documentation is available using the command:
+```
+gradle javadoc
+```
+The documentation will be generated and placed in ```A1\build\docs\javadoc```
+
 ## Limitations
 
 There are no errors to game functionality, it works as intended.
 
-One limitation to improve in further development is the addition of a cell class to increase encapsulation in the main board array object, added with a constructor, accessor, and mutator for individual cells. The possibility of adding a rule class to organize checking win conditions, checking validity of movements, and move history could also be good for code maintanance.
+One limitation to improve in further development is the addition of a cell class to increase encapsulation in the main board array object, added with a constructor, accessor, and mutator for individual cells. 
+
+The possibility of adding a rule class to organize checking win conditions, checking validity of movements, and move history could also be good for code maintanance.
 
 ## Author Information
 
@@ -46,5 +56,13 @@ One limitation to improve in further development is the addition of a cell class
 
 ## Development History
 
+* 0.1.2
+    * Major bug fix [(Commit Details)](6f6a27e5ca7700f24259015474baf40013adbdcd)
+        * Fixed main loop code 
+        * Added more documentation
+
+* 0.1.1
+    * Documentation release [(Commit Details)](b72de67963fb56ad611301d2263e0f303fe080dd)
+
 * 0.1
-    * Initial Release
+    * Initial Release [(Commit Details)](a13b55ad5cc937b8f7bc4956933bc46bf5f3bb6a)
