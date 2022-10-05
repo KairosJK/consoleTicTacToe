@@ -48,12 +48,6 @@ One limitation to improve in further development is the addition of a cell class
 
 The possibility of adding a rule class to organize checking win conditions, checking validity of movements, and move history could also be good for code maintanance.
 
-## Author Information
-
-**Author Name:** Jonathan Kocevar
-
-**Author Email:** jkocevar@uoguelph.ca
-
 ## Development History
 
 * 0.1.2
